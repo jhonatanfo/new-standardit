@@ -181,69 +181,93 @@ a.navbar-brand {
 .solucoes .row {
   margin: 0;
 }
+.itens-solucoes .itens-solucoes-destaque:last-child{
+  border: none;
+}
+.itens-solucoes-destaque {
+  width: 50%;
+  display: inline-block;
+  border-right: 1px solid #939393;
+  position: relative;
+  z-index: 1;
+  float: left;
+  padding: 20px 6% 20px 8%;
+  margin-top: 46px;
+}
 .solucoes .itens-solucoes {
-  height: 580px;
-  padding: 40px !important;
+  height: 300px;
+  padding: 0 !important;
   position: relative;
 }
-.solucoes .itens-solucoes:before{
-  content: "";
+.solucoes .itens-solucoes.full {
+  padding: 88px 81px !important;
+}
+.solucoes .row > div{
+  padding: 10px;
+}
+.solucoes .itens-solucoes span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #20292D;
+  background: #8B8B8B;
+  padding: 3px 20px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(43, 43, 43, 0.5);
+  border-radius: 0 0 6px 0;
 }
-.solucoes .itens-solucoes h3{
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--branco);
-  background: #20292D;
-  padding: 2px 8px;
-  width: auto;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-.solucoes .itens-solucoes:hover h3{
-  color: #20292D;
-  background: var(--amarelo);
+.solucoes .itens-solucoes .itens-solucoes-destaque span {
+  top: -46px;
 }
 .solucoes .itens-solucoes h2 {
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 30px;
   color: #FFFFFF;
-  position: relative;
-  margin-top: 380px;
-  padding-top: 5px;
-  z-index: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-.solucoes .itens-solucoes h2::before{
-  content: "";
-  position: absolute;
-  width: 36px;
-  height: 6px;
-  top: -4px;
-  left: 0;
-  background: var(--amarelo);
+.solucoes .itens-solucoes.full {
+  padding: 100px 81px !important;
+  margin-top: 0;
+}
+.solucoes .itens-solucoes p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 134.4%;
+  color: #FFFFFF;
+  height: 40px;
 }
 .solucoes .itens-solucoes a{
-  width: 40px;
+  width: max-content;
   height: 40px;
-  background: var(--color-btn) url(../img/seta-solucoes.svg) no-repeat center;
+  border: 1px solid var(--amarelo);
+  padding: 8px 36px;
+  color: var(--branco);
+  font-size: 14px;
+}
+.solucoes .itens-solucoes .itens-solucoes-destaque:hover a{
+  background: var(--amarelo);
+  color: #222222;
+}
+.solucoes .itens-solucoes.full a {
+  background: #222222 url(../img/seta-amarela-right.svg) no-repeat center;
+  height: 70px;
+  width: 70px;
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  padding: 0;
+}
+.solucoes .itens-solucoes.full:hover a{
+  background: var(--amarelo) url(../img/seta-amarela-right-hover.svg) no-repeat center;
 }
 .solucoes .itens-solucoes:hover{
   cursor: pointer;
-}
-.solucoes .itens-solucoes:hover a{
-  background: var(--amarelo) url(../img/seta-solucoes-hover.svg) no-repeat center;
 }
 .numeros{
   padding: 100px 10%;
