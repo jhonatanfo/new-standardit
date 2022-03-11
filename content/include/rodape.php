@@ -1,3 +1,13 @@
+<div class="backdrop"></div>
+
+<div class="modal-video">
+	<div class="bg-ripple">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+	<a class="fechar"></a>
+	<div class="incluir-video"></div>
+</div>
+
 <footer>
 	<div class="container">
 		<div class="row">

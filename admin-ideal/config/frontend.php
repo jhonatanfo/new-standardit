@@ -24,9 +24,7 @@
     define("PAGINA", $url);
     
     //define("URL", "https://gomara.tech/");
-    define("URL", "http://localhost/projetos/standardit/");
-
-
+    define("URL", "http://localhost/projetos/new-standardit/");
 
     // identifica idioma
     if(isset($_GET["idioma"])){ $sku = $_GET["idioma"]; } else { $sku = "pt"; }

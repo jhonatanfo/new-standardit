@@ -40,13 +40,43 @@
 	<div class="container-fluid">
 		<div class="row">
 			<?php for($index = 0;$index < $totalblocos;$index++){ if($blocos[$index]["id_categoria"] == $Arraycategorias[0]['id_categoria']){ ?>
-				<div class="col-2">
+				
+				<?php if($index < 3){  ?>
+
+
+				<div class="col-12 col-md-6">
 					<div class="itens-solucoes" style="background:  url(<?php echo URL; ?>/uploads/blocos/<?= $blocos[$index]["imagem"]; ?>) no-repeat center / cover;">
-						<h3><?php $bloco = unserialize($blocos[$index]["chamada"]);  echo $bloco[0];  ?></h3>
+						<div class="itens-solucoes-destaque">
+							<span><?php $bloco = unserialize($blocos[$index]["chamada"]);  echo $bloco[1];  ?></span>
+							<h2><?= $blocos[$index]["titulo"]; ?></h2>
+							<p><?php $bloco = unserialize($blocos[$index]["chamada"]);  echo $bloco[0];  ?></p>
+							<a>Saiba mais</a>
+						</div>
+						<div class="itens-solucoes-destaque">
+							<h2><?= $blocos[$index + 1]["titulo"]; ?></h2>
+							<p><?php $bloco = unserialize($blocos[$index + 1]["chamada"]);  echo $bloco[0];  $index ++;?></p>
+							<a>Saiba mais</a>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				<?php } else if($index > 3) {  ?>
+
+
+				<div class="col-12 <?php echo "col-md-4"; ?> ">
+					<div class="itens-solucoes full" style="background:  url(<?php echo URL; ?>/uploads/blocos/<?= $blocos[$index]["imagem"]; ?>) no-repeat center / cover;">
+						<span><?php $bloco = unserialize($blocos[$index]["chamada"]);  echo $bloco[1];  ?></span>
 						<h2><?= $blocos[$index]["titulo"]; ?></h2>
+						<p><?php $bloco = unserialize($blocos[$index]["chamada"]);  echo $bloco[0];  ?></p>
 						<a></a>
 					</div>
 				</div>
+
+				<?php } ?>
+
+
 			<?php } } ?>
 		</div>
 	</div>
@@ -74,8 +104,6 @@
 		</div>
 	</div>
 </section>
-
-
 
 <section class="depoimentos img">
 	<div class="container">
@@ -124,22 +152,7 @@
 	</div>
 </section>
 
-
-
-<section class="clientes">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="slick-clientes">
-					<?php for($index = 0;$index < $totalclientes;$index++){ ?>
-						<div><a><img src="<?php echo URL."uploads/clientes/".$clientes[$index]["img_name"]; ?>" alt="<?php echo $clientes[$index]["nome"]; ?>"/></a></div>
-                    <?php } ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <?php include ('content/include/social.php'); ?>	
 <?php include ('content/include/rodape.php'); ?>	
 
+ 
