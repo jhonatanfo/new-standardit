@@ -186,38 +186,16 @@
 	</div>
 </section>
 
-<section class="clientes">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="slick-clientes">
-					<?php for($index = 0;$index < $totalclientes;$index++){ ?>
-						<div><a><img src="<?php echo URL."uploads/clientes/".$clientes[$index]["img_name"]; ?>" alt="<?php echo $clientes[$index]["nome"]; ?>"/></a></div>
-                    <?php } ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <?php include ('content/include/social.php'); ?>	
 <?php include ('content/include/rodape.php'); ?>	
 
-<div class="backdrop"></div>
 
-<div class="modal-video">
-	<div class="bg-ripple">
-        <div class="lds-ripple"><div></div><div></div></div>
-    </div>
-	<a class="fechar"></a>
-	<div class="incluir-video"></div>
-</div>
 
 <script type="text/javascript" src="<?php echo URL; ?>content/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="<?php echo URL; ?>content/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo URL; ?>content/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo URL; ?>content/aos-master/dist/aos.js"></script>
-<script type="text/javascript" src="<?php echo URL; ?>js/action.js"></script>
+<script type="text/javascript" src="<?php echo URL; ?>content/js/action.js"></script>
 		
 <script type="text/javascript">	
 	$(document).ready(function(){
